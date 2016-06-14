@@ -27,5 +27,25 @@ export default class ToDoController{
             taskId.status = true;
             this.tasks.$save(taskId);
             }
+            
+        this.filtering = function(type) {
+             switch (type) {
+                case 'completed':
+                    this.filter = true;
+                    break;
+                case 'uncompleted':
+                    this.filter = false;
+                    break;
+                case 'my':
+                    this.filter = $rootScope.authData.password.email;
+                    break;
+                case 'all':
+                    this.filter = "";
+                    break;
+                default:
+                    this.filter = "";
+                }
+            }
+          
         }
 }

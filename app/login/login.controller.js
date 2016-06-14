@@ -22,13 +22,12 @@ export default class LoginController {
                   $rootScope.authData = authData;
                   $rootScope.auth = true;
                   console.log('z auth: ', $rootScope.authData);
-                  $location.path('/todo');
               });
           }
       });
+      if($rootScope.auth ==true)
+        $location.path('/todo');
     }
-    
-
       
   }
   

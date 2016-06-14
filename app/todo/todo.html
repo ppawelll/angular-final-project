@@ -6,7 +6,7 @@
       <button type="submit" class="form-control btn glyphicon glyphicon-plus" ng-click="todoCtrl.add()"></button>
     </div>
   </div>
-      
+  
   <div class="table-responsive">
     <table class="table table-condensed">
       <thead>
@@ -18,13 +18,24 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="task in todoCtrl.tasks">
+        <tr ng-repeat="task in todoCtrl.tasks | filter:todoCtrl.filter">
           <td>{{task.author}}</td>
           <td>{{task.task}}</td>
           <td>{{task.status}}</td>
           <td ng-show=task.author==authData.password.email><button type="submit" class="form-control btn glyphicon glyphicon-trash" ng-click="todoCtrl.remove(task)"><button type="submit" class="form-control btn glyphicon glyphicon-ok" ng-click="todoCtrl.complete(task)"></button></td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>
+            <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('completed')">Completed tasks</button>
+            <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('uncompleted')">Uncompleted tasks</button>
+            <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('my')">My tasks</button>
+            <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('all')">All tasks</button>
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </form>

@@ -18,7 +18,7 @@
             <a ui-sref="todo" ng-show="auth">toDos</a>
           </li>
           <li>
-            <a ui-sref="logout" ng-show="auth">Sign out</a>
+            <a ui-sref="login" ng-show="auth"><button class="btn btn-primary pull-right btn-sm" type="submit" ng-show="auth" ng-click="logoutCtrl.signout()">sing out</button></a>
           </li>
         </ul>
       </div>
