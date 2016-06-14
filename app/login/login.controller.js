@@ -22,7 +22,7 @@ export default class LoginController {
                   $rootScope.authData = authData;
                   $rootScope.auth = true;
                   console.log('z auth: ', $rootScope.authData);
-                  $location.path('/list');
+                  $location.path('/todo');
               });
           }
       });

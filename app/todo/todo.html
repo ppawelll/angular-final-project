@@ -1,0 +1,28 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputmess" class="col-sm-2 control-label">Task</label>
+    <div class="col-sm-6">
+      <input class="form-control" id="inputmess" placeholder="Task" ng-model="todoCtrl.task">
+      <button type="submit" class="form-control btn glyphicon glyphicon-plus" ng-click="todoCtrl.add()"></button>
+    </div>
+  </div>
+      
+  <div class="table-responsive">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Task</th>
+          <th>Complete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="task in todoCtrl.tasks">
+          <td>{{task.author}}</td>
+          <td>{{task.task}}</td>
+          <td>{{task.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

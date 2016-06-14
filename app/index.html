@@ -15,6 +15,9 @@
             <a ui-sref="register" ng-hide="auth">Sing up</a>
           </li>
           <li>
+            <a ui-sref="todo" ng-show="auth">toDos</a>
+          </li>
+          <li>
             <a ui-sref="logout" ng-show="auth">Sign out</a>
           </li>
         </ul>
