@@ -38,4 +38,26 @@
       </tfoot>
     </table>
   </div>
+  
+  <div>
+    <div class="table-responsive">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Completed</th>
+          <th>Uncompleted</th>
+          <th>My</th>
+          <th>All</th>
+        </tr>
+      <tbody>
+        <tr>
+          <td>{{(todoCtrl.tasks | filter: { status : true }).length}}</td>
+          <td>{{(todoCtrl.tasks | filter: { status : false }).length}}</td>
+          <td>{{(todoCtrl.tasks | filter: { author : $rootScope.authData.password.email }).length}}</td>
+          <td>{{todoCtrl.tasks.length}}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
 </form>
