@@ -21,5 +21,11 @@ export default class ToDoController{
         this.remove = function(task){
             this.tasks.$remove(task);
             }
+            
+        this.complete = function(task){
+            var taskId = this.tasks.$getRecord(task.$id);
+            taskId.status = true;
+            this.tasks.$save(taskId);
+            }
         }
 }

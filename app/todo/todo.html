@@ -14,7 +14,7 @@
           <th>Author</th>
           <th>Task</th>
           <th>Complete</th>
-          <th>Remove</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@
           <td>{{task.author}}</td>
           <td>{{task.task}}</td>
           <td>{{task.status}}</td>
-          <td ng-show=task.author==authData.password.email><button type="submit" class="form-control btn glyphicon glyphicon-minus" ng-click="todoCtrl.remove(task)"></button></td>
+          <td ng-show=task.author==authData.password.email><button type="submit" class="form-control btn glyphicon glyphicon-trash" ng-click="todoCtrl.remove(task)"><button type="submit" class="form-control btn glyphicon glyphicon-ok" ng-click="todoCtrl.complete(task)"></button></td>
         </tr>
       </tbody>
     </table>
