@@ -27,7 +27,7 @@
       </tbody>
       <tfoot>
         <tr>
-          <td></td>
+          <td>Filters:</td>
           <td>
             <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('completed')">Completed tasks</button>
             <button type="button" class="btn btn-default" ng-click="todoCtrl.filtering('uncompleted')">Uncompleted tasks</button>
@@ -53,7 +53,7 @@
         <tr>
           <td>{{(todoCtrl.tasks | filter: { status : true }).length}}</td>
           <td>{{(todoCtrl.tasks | filter: { status : false }).length}}</td>
-          <td>{{(todoCtrl.tasks | filter: { author : $rootScope.authData.password.email }).length}}</td>
+          <td>{{(todoCtrl.tasks | filter: { author : authData.password.email }).length}}</td>
           <td>{{todoCtrl.tasks.length}}</td>
         </tr>
       </tbody>
