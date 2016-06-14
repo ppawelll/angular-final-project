@@ -17,5 +17,9 @@ export default class ToDoController{
               this.task = "";
               this.status = false;
             }
+            
+        this.remove = function(task){
+            this.tasks.$remove(task);
+            }
         }
 }
