@@ -18,14 +18,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "angularfire": "^1.2.0",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
-    "firebase": "^2.4.2",
     "html-loader": "^0.4.3",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
@@ -34,6 +32,9 @@
   "dependencies": {
     "angular": "^1.5.2",
     "angular-ui-router": "^0.2.18",
-    "bootstrap": "^3.3.6"
+    "angularfire": "^1.2.0",
+    "bootstrap": "^3.3.6",
+    "firebase": "^2.4.2",
+    "ngstorage": "^0.3.10"
   }
 }
